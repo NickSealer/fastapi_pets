@@ -1,0 +1,16 @@
+´´´
+pip install alembic
+alembic init alembic
+
+alembic revision --autogenerate -m "add new field"
+alembic upgrade head
+
+alembic downgrade -1
+alembic downgrade base
+alembic downgrade <revision>
+
+alembic history --verbose
+alembic current
+´´´
+
+Generic single-database configuration.
