@@ -1,8 +1,6 @@
 from fastapi import FastAPI
-from app import models
+from app.routes import users
 
 app = FastAPI()
 
-@app.get('/')
-def root():
-  return {'message': 'API OK!!!!'}
+app.include_router(users.router)
