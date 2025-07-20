@@ -10,6 +10,12 @@ class UserBase(BaseModel):
 class CreateUser(UserBase):
   password: str
   
+class UpdateUser(UserBase):
+  username: Optional[str] = None
+  email: Optional[str] = None
+  password: Optional[str] = None
+  birthdate: Optional[date] = None
+  
 class UserResponse(UserBase):
   id: int
   class Config:
